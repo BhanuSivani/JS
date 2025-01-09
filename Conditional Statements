@@ -1,0 +1,62 @@
+###Theory###
+Conditional Statements
+to make the set of instructions(block of code)(conditional block)execute only when the given condition is true
+Used to decide whether the code has to be executed or skipped based on the given condition
+line - line (Sequence)
+BLOCK OF CODE:
+Set of instructions is called block of code
+it executes only when that specific condition is true
+CONDITION:
+an expression that evaluates a result
+EX: console.log(5>6)
+Methods:
+if
+if is used for only one possible condition,if the condition is true the statement gets executed or gets skipped
+Syntax: if (condition){
+                                         block of code
+                                     }
+if-else
+else if
+switch
+ternary operators
+###CODE###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //if and else
+        /*let a=5
+        let b=10
+        if(a>b){
+            document.write("Hi Humans","<br>")
+        }else{
+            document.write("Autobots","<br>")
+        }
+        document.write("Welcome to Cybertron","<br>")*/
+        //else if
+        /*age = prompt("Enter your age")
+        name = prompt("Enter your Name")
+        if (age<18){
+            alert(name + "You are too young to marry")
+        }else if (age>35){
+            alert (name +"You are too old to marry")
+        }else{
+            alert(name+" Perfect age to marry")
+        }*/
+       a = prompt("Enter your Score")
+       b = prompt("Enter your score")
+       if (a>300||b>300){
+        document.write("You Should Team UP!!!")
+       }else if (a+b<500){
+        document.write("You Should Team UP!!!")
+       }else{
+        document.write("You should not team up!!")
+       }
+    </script>
+</body>
+</html>
