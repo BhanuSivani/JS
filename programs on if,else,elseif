@@ -1,0 +1,78 @@
+a program to check if the given input is divisible by 2 and 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //a program to check if the given input is divisible by 2 and 3
+        let number = parseInt(prompt("Enter The Value"))
+        if (number % 2 ==0 && number %3 ==0){
+            document.write("The number is divisible by 2 and 3")
+        }else if (number %2 == 0){
+            document.write("The number is only divisible by 2")
+        }else if(number %3 ==0){
+            document.write("the number is only divisible by 3")
+        }else{
+            document.write("The number is not divisible by 2 and 3")
+        }
+        </script>
+</body>
+</html>
+
+a program to find largest number out of three numbers expected from user
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let a = parseInt(prompt("Enter the first Value"))
+       let b = parseInt(prompt("Enter the second value"))
+       let c = parseInt(prompt("Enter the third value"))
+       let largest = a
+       if(b>largest){
+        largest = b
+       }else if(c>largest){
+        largest = c
+       }else if(a==b ||b==c||c==a){
+        document.write("Invalid Input")
+       }else{
+        document.write("The Largest number is: " + largest)
+       }
+</body>
+</html>
+
+accept the following from the user and calculate the percentage of classes
+    attended
+    a)total number of working days
+    b)total number of days absent
+    after calculating the percentage show that,if the percentage is less than 75,
+    then student is not eligible to write the exam
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let number_of_working_days = parseInt(prompt("Total Number of working days"))
+    let total_number_of_days_absent = parseInt(prompt("Number of days absent"))
+    let total_number_of_days_present = number_of_working_days-total_number_of_days_absent
+    let percentage = ((total_number_of_days_present/number_of_working_days)*100)
+    if (percentage > 75){
+        document.write("You are eligible to write exam")
+    }else{
+        document.write("You are not eligible to write exam")
+    }
+</body>
+</html>
+    
