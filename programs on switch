@@ -1,0 +1,100 @@
+// A program to calculate total number of handshakes made
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Handshake Calculator</h1>
+    <label for="students">Enter the number of students:</label>
+    <input type="no." id="students" min="2" placeholder="Enter a no.">
+    <button onclick="calculateHandshakes()">Calculate Handshakes</button>
+    <h2>Total Handshakes: <span id="result">0</span></h2>
+    <script>
+       
+        function calculateHandshakes() {
+            let n = parseInt(document.getElementById('students').value);
+            if (isNaN(n) || n < 2) {
+                alert("valid no. of students.");
+                return;
+            }
+            let handshakes = (n * (n - 1)) / 2;
+            document.getElementById('result').innerText = handshakes;
+        }
+
+    </script>
+</body>
+</html>
+
+// a program to calculate whether the given day is a weekday or a weekend
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //program to find whether its a weekday or weekend based on user input
+        /*let day = prompt("Enter a Day: ")
+        switch(day){
+            case 'monday':
+            case 'tuesday':
+            case 'wednesday':
+            case 'thursday':
+                document.write("It's a weekday");
+                break;
+            case 'Friday':
+            case 'saturday':
+            case 'sunday':
+                document.write("Its a weekend!!");
+                break;
+            
+        }*/
+      
+
+    </script>
+</body>
+</html>
+
+//a program to calculate electricity bill
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    let a=parseInt(prompt("Enter the number of units: "))
+        switch(true){
+            case a>0 && a<51:
+            let b=  a*2;
+            document.write(b + (b*0.2));
+            break;
+            case a>=51 && a<151:
+            let c = (50*2) +((a-50)*3);
+            document.write(c + (c*0.2));
+            break;
+            case a>150 && a<251:
+            let d=  (50*2)+(100*3)+((a-150)*5);
+            document.write(d + (d*0.2));
+            break;
+            case a>250:
+            let e=  (50*2)+(100*3)+(150*5)+((a-250)*8);
+            document.write(e + (e*0.2));
+            break;
+            default:
+            alert("Invalid input")
+        }
+
+    </script>
+</body>
+</html>
