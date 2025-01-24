@@ -1,0 +1,103 @@
+##Arrow Functions:
+
+They make the code more readable and have a structure
+anonymous functions(lambda functions)
+without function name but they are assigned to a variable
+
+let c=()=>{
+         document.write(“Hello World”)
+}
+c()
+
+Arrow functions with parameter
+Example1:
+let x=(x,y)=>{
+document.write(x+y)
+}
+x(20,30)
+x(40,50)
+
+Example2:
+When there is arrow function with one argument there is no need of paranthesis
+let greet=x=>document.write(x);
+greet(“Hello World”)
+
+Example3:
+Arrow function without an argument
+let greet=()=>document.write(“Hi CSE”)
+greet()
+
+Example4:
+Arrow functions as an expression
+let 19;
+let welcome = (age<19)?
+()=>document.write(“You are still a minor”)
+()=>document.write(“You are a major”)
+welcome()
+
+Synchronous functions and asynchrounous functions:
+
+Synchronous:
+
+Step by step
+one task at a time
+Example:
+//Synchronous
+function task1(){
+console.log(“Task1: Start”)
+}
+function task2(){
+console.log(“Task2: Start”)
+}
+function task3(){
+console.log(“Task3: Start”)
+}
+task1()
+task2()
+task3()
+
+Asynchronous:
+
+multiple tasks at a time
+//Asynchronous
+document.write("Hello class!")
+        setTimeout(()=>{
+            document.write(" Today's topic is arrow functions")
+        },2000);
+        document.write(" Welcome to training session")
+
+
+Javascript callbacks:
+Functions
+oops
+file handling
+multithreading
+exception handling
+json
+
+CallBack Functions:
+A callback function is a function that is passes argument to another function
+function greet(name,callback){
+   document.write(`Hello,${name}!`)
+   callback();
+//calls the callback function and is executed after greeting
+}
+function welcome(){
+document.write(“welcome to the club!”)
+}
+//call the greet and pass welcome
+greet(“Sivani”,welcome)
+Eventual completion:
+there are three states:
+Pending-operation is continuing
+fulfilled-task completed
+rejected-the operation failed
+Example:
+let myPromise = new Promise((resolve,reject)=>{
+let success = true
+if (success){
+resolve(“Task completed”);
+}
+else{
+reject(“Task Failed”)
+}}}
