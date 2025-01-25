@@ -1,0 +1,74 @@
+CallBack Functions:
+we can pass the callback functions as an argument to another function
+Excecution
+The function which is receiving the callback will execute the callback at somepoint during execution(often at the end or after an asynchronous operation is done)
+
+Example:
+function mainfunction(callback){
+console.log(“Executing main function”)
+callback()
+//here we call the callback function
+}
+function callbackfunction(){
+console.log(“Call back function executed”)
+}
+main function(callback function);
+exp:
+
+mainfunction takes a parameter callback
+callback function is passed as an argument to the main function
+Expected output:
+mainfunction(callbakFunction):
+it will execute the code inside mainfunction
+(“Executing the main function”)
+then it reaches to callback();where it calls the function which is passed to mainfunction(callbackfunction)
+
+Example:2
+Passing a named function as a callback;
+function greet(name,callback){
+console.log(“Hello ” + name);
+callback();
+}
+function goodbye(){
+console.log(“Goodbye!”)
+}
+greet(“sivani ” , goodbye);
+
+Example3:
+using an anonymous function as a callback
+function greet(name,callback){
+console.log(“Hello ” + name);
+callback();
+}
+greet(“Sivani ” , function()){
+console.log(“Goodbye!”)
+});
+
+Example4:
+Asynchronous callback with setTimeout
+function fetchdata(callback){
+function fetchdata(“Fetching Data....”)
+setTimeout(function()){
+console.log(“Data Fetched”);
+callabck();
+},2000);
+}
+function processData(){
+console.log(“processing fetched data..”)
+}
+fetchdata(processdata);
+
+Example:6
+<script>
+      function registeruser(username, email, callback) {
+        console.log("registering user" + username);
+        setTimeout(function () {
+          console.log("user" + username + "registered succesfully");
+          callback(email);
+        }, 2000);
+      }
+      function sendWelcomeEmail(email) {
+        console.log("sending welcome email to" + email);
+      }
+      registeruser("Harshith", "harshith123@gmail.com,sendWelcomeEmail");
+    </script>
