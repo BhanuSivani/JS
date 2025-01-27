@@ -1,0 +1,85 @@
+Promise:
+A promise is a special javasrcipt object that represents the eventual completion or failure of an asynchronous operation
+it allows to handle asynchronous tasks more efficiently than call backs
+Three States:
+Pending: The initial state the promise is still wanting the operation to finish
+Fulfilled:  The operation completed successfuly
+Rejected: The operation failed
+
+Explanation1:
+to create a promise: new promise()
+it takes two parameters:
+resolve: to mark the promise as successful
+reject: to mark it as failed
+To handle the result: 
+.then()
+it is called when the promise is fullfilled
+it will receive the result from parameter
+.catch()
+This method is called if the promise is rejected
+chaining promises:
+Example2: promise with setTimeOut
+asynchronous task using setTimeout and the promise will resolve after a certain amonut of time
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //example1
+        /*let myPromise = new Promise((resolve, reject) => {
+            let success = true;
+            if (success){
+                resolve("The operation is successfull");
+            }else{
+                reject("The operation has failed");
+            }
+        });
+        myPromise
+        .then(result =>{
+            document.write(result);
+        });
+        myPromise
+        .catch(error =>{
+            document.write(error);
+        });*/
+
+        //A promise with setTimeout
+        // Function that returns a promise that resolves after a delay
+        let pro=new Promise((resolve,reject)=>{
+        resolve(5);
+    })
+    pro.then(result=>{
+        console.log(result)
+        setTimeout((pro)=>{
+            console.log("success")
+        },3000)
+    });
+
+    //Chaining Promises
+    /*let mypromise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve();
+    } else {
+        reject();
+    }
+});
+
+mypromise.then(() => {
+    console.log("Success");
+    document.write("Success");
+}).catch(() => {
+    console.log("Failed");
+    document.write("Failed");
+});*/
+
+
+
+    </script>
+</body>
+</html>
