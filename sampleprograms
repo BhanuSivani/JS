@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = parseInt(prompt("Enter your age"))
+        let citizen_status = prompt("Are you a citizen?please enter 'yes'or'no")
+        if (age>=18 && citizen_status == "yes"){
+            document.write("You are eligible to vote");
+        }else if (age<18){
+            document.write("you are not eligible to vote");
+        }else{
+            document.write("you are not eligible to vote");
+        }
+        
+let finalAmount = amountSpent - (amountSpent * discount / 100);
+document.write("Total discount: " + discount + "%<br>");
+document.write("Final amount after discount: Rs." + finalAmount.toFixed(2));
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let amountSpent = prompt("enter the amount spent:");
+        let isPremiumMember = prompt("are you a premium member?");
+        amountSpent = parseFloat(amountSpent);
+        let discount = 0;
+        if (amountSpent > 100) {
+           discount = 20;
+        } else if (amountSpent > 50 && amountSpent <= 100) {
+           discount = 10;
+        }
+        if (isPremiumMember.toLowerCase() === "yes") {
+           discount += 5;
+        }
+let finalAmount = amountSpent - (amountSpent * discount / 100);
+document.write("Total discount: " + discount + "%<br>");
+document.write("Final amount after discount: Rs." + finalAmount.toFixed(2));
+    </script>
+</body>
+</html>
